@@ -1,11 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport">
-    <title>All the Cats</title>
-</head>
+<%- include('partials/head') %>
 <body>
+<%- include('partials/navbar') %>
 <h1>All Cats!</h1>
 <% for (cat of cats) { %>
     <li><%= cat %></li>
