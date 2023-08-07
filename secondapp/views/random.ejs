@@ -4,15 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport">
     <title>Random</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/bootstrap.min.js"></script>
 </head>
 <body>
-<h1>Your random number is <%= randomNumber; %></h1>
-<% if (randomNumber % 2 === 0) { %>
-    <h2>That is an even number</h2>
-<% } else { %>
-    <h2>That is an odd number</h2>
-<% } %>
-<%= randomNumber % 2 === 0 ? 'EVEN' : 'ODD' %>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                <a class="nav-link" href="/rand">Random</a>
+                <a class="nav-link" href="/r/soccer">Soccer</a>
+                <a class="nav-link" href="/r/chickens">Chickens</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <h1>Your random number is <%= randomNumber; %></h1>
+    <% if (randomNumber % 2 === 0) { %>
+        <h2>That is an even number</h2>
+    <% } else { %>
+        <h2>That is an odd number</h2>
+    <% } %>
+    <%= randomNumber % 2 === 0 ? 'EVEN' : 'ODD' %>
+</div>
 
 </body>
 </html>
