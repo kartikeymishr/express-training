@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Show Comment</title>
+</head>
+<body>
+<h1>Comment ID: <%= comment.id %></h1>
+<h2><%= comment.comment %> - <%= comment.username %></h2>
+<br>
+<a href="/comments">Back to Comments</a>
+<a href="/comments/<%= comment.id %>/edit">Edit Comment</a>
+<form action="/comments/<%= comment.id %>?_method=DELETE" method="post">
+    <button>Delete</button>
+</form>
+</body>
+</html>
